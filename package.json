@@ -1,0 +1,24 @@
+{
+  "name": "convert-my-money",
+  "version": "1.0.0",
+  "description": "Projeto da semana 3 do fullstack master",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucianoDos/convert-my-money.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LucianoDos/convert-my-money/issues"
+  },
+  "homepage": "https://github.com/LucianoDos/convert-my-money#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.17.1"
+  }
+}
