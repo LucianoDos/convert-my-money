@@ -1,6 +1,8 @@
 const express = require('express')
 const app = express()
 const path = require('path')
+
+const apiBCB = require('./lib/api-bcb')
 const convert = require('./lib/convert')
 
 const port = process.env.PORT || 3000
@@ -11,8 +13,11 @@ app.set('views', path.join(__dirname, 'views'))
 app.use(express.urlencoded({ extended:true }))
 app.use(express.static(path.join(__dirname, 'public')))
 
-app.get('/', (req, res) => {
-    res.render('home')
+app.get('/', async(req, res) => {
+    const cotacao = await apiBCB.getCotacao()
+    res.render('home', {
+        cotacao
+    })
 })
 
 app.get('/cotacao', (req, res) => {
